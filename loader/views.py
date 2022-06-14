@@ -15,12 +15,15 @@ def create_new_post():
 
 @loader_blueprint.route('/post', methods=['POST'])
 def create_new_post_by_user():
-    picture = request.files.get('picture')
-    content = request.form.get('content')
-    if not picture or not content:
-        logging.info("Данные не загруженны, отсутсвует часть данных")
-        return "Отсутствуют данные"    
-    posts = loads_json(POST_PATH)
-    new_post = {'pic': save_picture(picture), 'content': content}
-    append_new_post_by_json(posts, new_post)
-    return render_template('post_uploaded.html', new_post=new_post)
+    try:
+        picture = request.files.get('picture')
+        content = request.form.get('content')
+        if not picture or not content:
+            logging.info("Данные не загруженны, отсутсвует часть данных")
+            return "Отсутствуют данные"    
+        posts = loads_json(POST_PATH)
+        new_post = {'pic': save_picture(picture), 'content': content}
+        append_new_post_by_json(posts, new_post)
+        return render_template('post_uploaded.html', new_post=new_post)
+    except WrongImgType:
+        return "Неверный формат файла"

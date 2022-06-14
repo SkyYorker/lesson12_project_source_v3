@@ -13,7 +13,7 @@ def save_picture(picture):
 
     return picture_path
 
-
+    
 def append_new_post_by_json(post_list, post):
     post_list.append(post)
     with open(POST_PATH, 'w', encoding='utf-8') as file:

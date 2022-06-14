@@ -388,3 +388,92 @@ Traceback (most recent call last):
     return getattr(obj, attribute)
 jinja2.exceptions.UndefinedError: 'new' is undefined
 INFO:werkzeug:127.0.0.1 - - [25/May/2022 23:17:14] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:root:Открытые главной страницы
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:31:31] "GET /?s=ол HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:31:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Идёт поиск
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:31:35] "GET /search?s=ро HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:31:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытые главной страницы
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:31:43] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:31:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:31:50] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:31:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:33:35] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:33:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:33:35] "GET /uploads/images/Снимок%20экрана%202022-05-04%20151240.png HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:33:57] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:33:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Открытые главной страницы
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:34:00] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:34:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:34:08] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:34:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Данные не загруженны, отсутсвует часть данных
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:34:11] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:35:31] "GET /post HTTP/1.1" 200 -
+INFO:root:Данные не загруженны, отсутсвует часть данных
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:36:10] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:36:12] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:49:07] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:49:07] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Данные не загруженны, отсутсвует часть данных
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:49:16] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:49:18] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:52:20] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:52:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Данные не загруженны, отсутсвует часть данных
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\sandy\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\sandy\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\sandy\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\sandy\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "d:\pro\HW_12\lesson12_project_source_v3\loader\views.py", line 24, in create_new_post_by_user
+    new_post = {'pic': save_picture(picture), 'content': content}
+  File "d:\pro\HW_12\lesson12_project_source_v3\loader\utils.py", line 10, in save_picture
+    raise WrongImgType(f"Неверный формат файла: Допустмы только {','.join(allowed_type)}")
+exceptions.WrongImgType: Неверный формат файла: Допустмы только jpg,png,gif,jpeg
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:52:23] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:58:06] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:58:06] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Данные не загруженны, отсутсвует часть данных
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:58:10] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:58:11] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:58:26] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 18:58:30] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 19:02:29] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 19:02:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:Данные не загруженны, отсутсвует часть данных
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 19:04:00] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 19:04:03] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 19:04:05] "POST /post HTTP/1.1" 200 -
+INFO:werkzeug: * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 19:05:43] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 19:05:44] "GET /post HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 19:05:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+ERROR:app:Exception on /post [POST]
+Traceback (most recent call last):
+  File "C:\Users\sandy\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\sandy\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\sandy\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\sandy\AppData\Local\Programs\Python\Python310\lib\site-packages\flask\app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "d:\pro\HW_12\lesson12_project_source_v3\loader\views.py", line 25, in create_new_post_by_user
+    new_post = {'pic': save_picture(picture), 'content': content}
+  File "d:\pro\HW_12\lesson12_project_source_v3\loader\utils.py", line 10, in save_picture
+    raise WrongImgType(f"Неверный формат файла: Допустмы только {','.join(allowed_type)}")
+exceptions.WrongImgType: Неверный формат файла: Допустмы только jpg,png,gif,jpeg
+INFO:werkzeug:127.0.0.1 - - [14/Jun/2022 19:05:48] "[35m[1mPOST /post HTTP/1.1[0m" 500 -
